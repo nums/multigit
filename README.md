@@ -1,12 +1,12 @@
 # multigit
-A multigit manager with git flow features availables, but Git flow (http://danielkummer.github.io/git-flow-cheatsheet/) is not required.
-Just ```nodeJs``` and ```git > 1.7.x``` are required
+A multigit manager with git flow features availables, but Git flow (http://danielkummer.github.io/git-flow-cheatsheet/) is not required,
+ just ```nodeJs``` and ```git > 1.7.x``` are required
 
-#### 1. add lib to your package.json
+#### 1. Add lib to your package.json
 
 ```npm --save install multigit```
 
-#### 2. create .repositories file to setup your git repositories to manage
+#### 2. Create .repositories file to setup your git repositories to manage
 
 ```json
 {
