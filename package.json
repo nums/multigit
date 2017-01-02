@@ -1,8 +1,15 @@
 {
+  "name": "multigit",
+  "readme": "README.md",
   "dependencies": {
     "gulp-util": "^3.0.8",
     "inquirer": "^2.0.0",
     "shelljs": "^0.7.5",
     "yargs": "^6.6.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nums/multigit.git"
+  },
+  "version": "0.0.1"
 }

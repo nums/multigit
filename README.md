@@ -1,5 +1,7 @@
 # multigit
 A multigit manager with git flow features availables
+But Git flow (http://danielkummer.github.io/git-flow-cheatsheet/) is not required
+Just ```nodeJs``` and ```git > 1.7.x``` are required
 
 #### 1. add lib to your package.json
 
