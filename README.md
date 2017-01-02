@@ -59,8 +59,13 @@ gulp.task('init-flow', function() {
 ### 4. Use multi git
 
 ```gulp init -u USERNAME -p PASSWORD```
+
 ```gulp commit```
+
 ```gulp push```
+
 ```gulp pull```
+
 ```gulp init-flow```
+
 ```gulp flow``` (and answer questions)
