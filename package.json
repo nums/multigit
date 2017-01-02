@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "gulp-util": "^3.0.8",
+    "inquirer": "^2.0.0",
+    "shelljs": "^0.7.5",
+    "yargs": "^6.6.0"
+  }
+}
