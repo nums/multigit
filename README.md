@@ -5,7 +5,7 @@ Just ```nodeJs``` and ```git > 1.7.x``` are required
 
 #### 1. add lib to your package.json
 
-```npm --save require multigit```
+```npm --save install multigit```
 
 #### 2. create .repositories file to setup your git repositories to manage
 
