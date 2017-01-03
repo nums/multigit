@@ -20,7 +20,7 @@
     "type": "git",
     "url": "git+https://github.com/nums/multigit.git"
   },
-  "main": "./lib",
+  "main": "./",
   "bin": {
     "multigit": "./bin/multigit"
   },

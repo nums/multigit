@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+var multigit = require('../');
+
 if (multigit.commands[process.argv[2]]) {
     var m = process.argv[2].split('.');
     if(m.length > 0)
