@@ -5,11 +5,17 @@ try {
     var m = process.argv[2].split('.');		
     if(m.length > 1)
         multigit.commands[m[0]][m[1]]();
-    else
-        multigit.commands[m[0]]();
+    else {		
+		if(m[0] != 'init-flow' && m[0] != 'flow') {		
+			multigit.commands.classic();
+		}
+		else {
+			multigit.commands[m[0]]();
+		}
+	}
     return;
 }
 catch(err) {
-  console.log('[Error: The command ' + process.argv[2] + ' does not exist.]');
+  console.log(err);
   return;
 }

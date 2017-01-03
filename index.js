@@ -355,8 +355,18 @@ var git = {
     }
 }
 
+function classic() {
+	process.argv.shift();
+	process.argv.shift();	
+	var cmd = 'git ' + process.argv.join(' ');	
+	reposTools.process(function(params) {	
+        shell.exec('cd ' + params.path + ';' + cmd);
+    })
+}
+
 exports.commands = {
     s: git,
 	'init-flow': git.initFlow,
-    flow: workflow
+    flow: workflow,
+	classic: classic
 };
