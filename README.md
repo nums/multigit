@@ -36,27 +36,27 @@ Why multi ? Because I'm working on projects with different programatic languages
 ##### Shortcut (this is why we use 's.')
 To init all repositories
 
-```$multigit s.init -u USERNAME -p PASSWORD```
+```$ multigit s.init -u USERNAME -p PASSWORD```
 
 To do on all repositories : ```git add .; git commit -m "comment"```
 
-```$multigit s.commit -m "comment"```
+```$ multigit s.commit -m "comment"```
 
 To do on all repositories : ```git add .; git commit -m "comment";git pull origin [branchName];git push origin [branchName]```
 
-```$multigit s.push -m "comment"```
+```$ multigit s.push -m "comment"```
 
 To do on all repositories : ```git pull origin [branchName]```
 
-```$multigit s.pull```
+```$ multigit s.pull```
 
 To do on all repositories : ```git branch develop;git checkout develop;git push origin develop```
 
-```$multigit s.init-flow```
+```$ multigit s.init-flow```
 
 ##### Flow methods (inspired from git flow)
 To manage your branches with an interactive command line user interfaces
-```$multigit flow``` (and answer questions)
+```$ multigit flow``` (and answer questions)
 
 #### TODO
 - Handle git response better
