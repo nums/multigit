@@ -76,7 +76,7 @@ function init(params) {
 function initFlow(params) {
     params.action = 'init-flow';
     messageBefore(params)
-    var action = shell.exec('cd ' + params.path + ';git branch develop;git checkout develop;git push origin develop');
+    var action = shell.exec('cd ' + params.path + ';git branch develop;git checkout develop;git pull origin develop;git push origin develop');
     messageAfter(action, params);
 }
 
@@ -152,8 +152,8 @@ function branchStart(type, params) {
         messageBefore(params);
         var add = '';
         if (type == 'release' || type == 'hotfix')
-            add = ';git commit -a -m "Bumped version number to ' + branchName + '"';
-        var action = shell.exec('cd ' + params.path + ';git checkout -b ' + type + '/' + branchName + ' ' + getOriginBranch(type) + add);
+            add = ';git commit -a -m "Bumped version number to ' + branchName + '"';		
+        var action = shell.exec('cd ' + params.path + ';git fetch;git checkout -b ' + type + '/' + branchName + ' ' + getOriginBranch(type) + add);
         messageAfter(action, params);
         fs.writeFileSync('.branch', type + '/' + branchName);
     }
@@ -170,7 +170,7 @@ function branchFinish(type, params) {
         if (action.code === 0 && (type == 'release' || type == 'hotfix')) {
             params.action = 'send tag and merge develop';
             var message = argv.m || 'new tag : ' + branchName;
-            var action = shell.exec('cd ' + params.path + ';export GIT_MERGE_AUTOEDIT=no;git tag -a ' + branchName + ' -m "' + message + '";git push origin tag ' + branchName + ';git checkout develop;git merge --no-ff release/' + branchName + ';git merge --no-ff ' + type + '/' + branchName + ';git push origin develop;');
+            var action = shell.exec('cd ' + params.path + ';git fetch;export GIT_MERGE_AUTOEDIT=no;git tag -a ' + branchName + ' -m "' + message + '";git push origin tag ' + branchName + ';git checkout develop;git merge --no-ff release/' + branchName + ';git merge --no-ff ' + type + '/' + branchName + ';git push origin develop;');
             messageAfter(action, params);
         }
         fs.writeFileSync('.branch', 'develop');
@@ -183,7 +183,7 @@ function branchPush(type, params) {
         commit(params);
         params.action = 'push ' + type + ' ' + branchName;
         messageBefore(params);
-        var action = shell.exec('cd ' + params.path + ';git checkout ' + type + '/' + branchName + ';git pull origin ' + type + '/' + branchName + ';git push origin ' + type + '/' + branchName);
+        var action = shell.exec('cd ' + params.path + ';git fetch;git checkout ' + type + '/' + branchName + ';git pull origin ' + type + '/' + branchName + ';git push origin ' + type + '/' + branchName);
         messageAfter(action, params);
         fs.writeFileSync('.branch', type + '/' + branchName);
     }
@@ -200,7 +200,7 @@ function branchPull(type, params) {
         commit(params);
         params.action = 'pull ' + type + ' ' + branchName;
         messageBefore(params);
-        var action = shell.exec('cd ' + params.path + ';export GIT_MERGE_AUTOEDIT=no;git fetch;git checkout ' + type + '/' + branchName + ' ' + getOriginBranch(type) + ';git pull origin ' + type + '/' + branchName);
+        var action = shell.exec('cd ' + params.path + ';export GIT_MERGE_AUTOEDIT=no;git fetch;git checkout ' + type + '/' + branchName + ';git pull origin ' + type + '/' + branchName);
         messageAfter(action, params);
         fs.writeFileSync('.branch', type + '/' + branchName);
     }
