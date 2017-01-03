@@ -2,8 +2,8 @@
 var multigit = require('../');
 
 try {	
-    var m = process.argv[2].split('.');	
-    if(m.length > 0)
+    var m = process.argv[2].split('.');		
+    if(m.length > 1)
         multigit.commands[m[0]][m[1]]();
     else
         multigit.commands[m[0]]();

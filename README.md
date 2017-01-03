@@ -50,11 +50,11 @@ To do on all repositories : ```git pull origin [branchName]```
 
 ```$ multigit s.pull```
 
-To do on all repositories : ```git branch develop;git checkout develop;git push origin develop```
-
-```$ multigit s.init-flow```
-
 ##### Flow methods (inspired from git flow)
+
+To prepare all repositories : ```git branch develop;git checkout develop;git push origin develop```
+
+```$ multigit init-flow```
 
 To manage your branches with an interactive command line user interfaces
 

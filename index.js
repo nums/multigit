@@ -314,7 +314,7 @@ var git = {
         this.confirm('push');
     },
     pull: function() {
-        this.confirm('push');
+        this.confirm('pull');
     },
     confirm: function(action) {
         var questions = [{
@@ -325,15 +325,15 @@ var git = {
 
         inquirer.prompt(questions).then(function(answers) {
             if (answers.continue)
-                git[action]()
+                git['do_'+action]()
         });
     },
-    doPush: function() {
+    do_push: function() {
         reposTools.process(function(params) {
             push(params);
         });
     },
-    doPull: function(params) {
+    do_pull: function(params) {
         reposTools.process(function(params) {
             pull(params);
         });
@@ -357,5 +357,6 @@ var git = {
 
 exports.commands = {
     s: git,
+	'init-flow': git.initFlow,
     flow: workflow
 };
