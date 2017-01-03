@@ -1,6 +1,7 @@
 {
   "name": "multigit",
-  "readme": "README.md",
+  "description": "A multigit manager with git flow features availables and some shortcuts to work more easily and quickly with git",
+  "author": "Emmanuel Freard",
   "dependencies": {
     "gulp-util": "^3.0.8",
     "inquirer": "^2.0.0",
@@ -11,5 +12,5 @@
     "type": "git",
     "url": "git+https://github.com/nums/multigit.git"
   },
-  "version": "0.0.1"
+  "version": "0.0.2"
 }

@@ -2,7 +2,7 @@
 A multigit manager with git flow features availables and some shortcuts to work more easily and quickly with git
 But Git flow (http://danielkummer.github.io/git-flow-cheatsheet/) is not required
 Just ```nodeJs``` and ```git > 1.7.x``` are required
-```This library is still in its early stages of development```
+**This library is still in its early stages of development**
 
 # Why ?
 To simplify the use of git: I always do the same 4 actions: ```git commit -m "update"; Git pull origin master; Git push original origin```
