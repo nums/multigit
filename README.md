@@ -11,7 +11,7 @@ Why multi ? Because I'm working on projects with different programatic languages
 
 #### 1. Add lib to your package.json
 
-```$ (sudo) npm install multigit -g```
+```$ (sudo) npm install -g multigit```
 
 #### 2. Create .repositories file to setup your git repositories to manage
 

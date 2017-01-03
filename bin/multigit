@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 var multigit = require('../');
 
-if (multigit.commands[process.argv[2]]) {
-    var m = process.argv[2].split('.');
+try {	
+    var m = process.argv[2].split('.');	
     if(m.length > 0)
-        multigit.commands[m[0][m[1]]();
+        multigit.commands[m[0]][m[1]]();
     else
         multigit.commands[m[0]]();
     return;
 }
-else {
-  console.log('[Error: The command ' + process.argv[2].bold + ' does not exist.]');
+catch(err) {
+  console.log('[Error: The command ' + process.argv[2] + ' does not exist.]');
   return;
 }
