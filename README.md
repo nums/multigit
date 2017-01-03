@@ -9,11 +9,12 @@ To simplify the use of git: I always do the same 4 actions: ```git commit -m "up
 With this lib, I juste have to call ```shortcut.push()``` method to do all theses actions.
 Why multi ? Because I'm working on projects with different programatic languages and so multiple repositories
 
-#### 1. add lib to your package.json
+#### 1. Add lib to your package.json
 
 ```$(sudo) npm multigit -g```
 
-#### 2. create .repositories file to setup your git repositories to manage
+
+#### 2. Create .repositories file to setup your git repositories to manage
 
 ```json
 {
