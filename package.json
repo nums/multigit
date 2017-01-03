@@ -8,7 +8,14 @@
     "shelljs": "^0.7.5",
     "yargs": "^6.6.0"
   },
-  "keywords": ["git", "multigit", "multi-git", "gitflow", "flow", "branch"],
+  "keywords": [
+    "git",
+    "multigit",
+    "multi-git",
+    "gitflow",
+    "flow",
+    "branch"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nums/multigit.git"
@@ -17,5 +24,5 @@
   "bin": {
     "multigit": "./bin/multigit"
   },
-  "version": "0.0.3"
+  "version": "0.0.4"
 }
