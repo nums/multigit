@@ -66,7 +66,7 @@ To manage your branches with an interactive command line user interfaces
 
 ```$ multigit status``` (for example, **not tested with arguments**)
 
-#### TODO
+# TODO
 
 - Handle git response better
 - Unit test
