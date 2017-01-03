@@ -11,8 +11,7 @@ Why multi ? Because I'm working on projects with different programatic languages
 
 #### 1. Add lib to your package.json
 
-```$(sudo) npm multigit -g```
-
+```$ (sudo) npm install multigit -g```
 
 #### 2. Create .repositories file to setup your git repositories to manage
 
@@ -34,6 +33,7 @@ Why multi ? Because I'm working on projects with different programatic languages
 #### 3. Use multigit
 
 ##### Shortcut (this is why we use 's.')
+
 To init all repositories
 
 ```$ multigit s.init -u USERNAME -p PASSWORD```
@@ -55,10 +55,13 @@ To do on all repositories : ```git branch develop;git checkout develop;git push 
 ```$ multigit s.init-flow```
 
 ##### Flow methods (inspired from git flow)
+
 To manage your branches with an interactive command line user interfaces
+
 ```$ multigit flow``` (and answer questions)
 
 #### TODO
+
 - Handle git response better
 - Unit test
 - Handle errors better
